@@ -8,7 +8,7 @@ public class Money {
 	@Override
 	public boolean equals(Object e) {
 		Money d = (Money) e;
-		return amount == d.amount && this.getClass() == d.getClass();
+		return amount == d.amount && currency().equals(d.currency());
 	}
 
 	public String currency() {
@@ -26,5 +26,9 @@ public class Money {
 	public Money(int amount, String currency) {
 		this.amount = amount; 
 		this.currency = currency;
+	}
+	
+	public String toString() {
+		return amount + "     " + currency;
 	}
 }
