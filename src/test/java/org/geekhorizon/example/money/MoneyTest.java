@@ -9,24 +9,24 @@ public class MoneyTest {
 
 	@Test
 	public void testMultiplication() {
-		Doller five = new Doller(5);
-		assertEquals(new Doller(10), five.times(2));
-		assertEquals(new Doller(15), five.times(3));
+		Doller five = Money.doller(5);
+		assertEquals(Money.doller(10), five.times(2));
+		assertEquals(Money.doller(15), five.times(3));
 	}
 
 	@Test
 	public void testEquality() {
-		assertTrue(new Doller(10).equals(new Doller(10)));
-		assertFalse(new Doller(6).equals(new Doller(5)));
-		assertTrue(new Franc(10).equals(new Franc(10)));
-		assertFalse(new Franc(6).equals(new Franc(5)));
-		assertFalse(new Doller(5).equals(new Franc(5)));
+		assertTrue(Money.doller(10).equals(Money.doller(10)));
+		assertFalse(Money.doller(6).equals(Money.doller(5)));
+		assertTrue(Money.franc(10).equals(Money.franc(10)));
+		assertFalse(Money.franc(6).equals(Money.franc(5)));
+		assertFalse(Money.doller(5).equals(Money.franc(5)));
 	}
 	
 	@Test
 	public void testFrancMultiplication() {
-		Franc five = new Franc(5);
-		assertEquals(new Franc(10), five.times(2));
-		assertEquals(new Franc(15), five.times(3));
+		Franc five = Money.franc(5);
+		assertEquals(Money.franc(10), five.times(2));
+		assertEquals(Money.franc(15), five.times(3));
 	}
 }

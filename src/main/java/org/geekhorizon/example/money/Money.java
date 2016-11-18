@@ -9,4 +9,13 @@ public class Money {
 		Money d = (Money) e;
 		return amount == d.amount && this.getClass() == d.getClass();
 	}
+
+	public static Doller doller(int amount) {
+		return new Doller(amount);
+	}
+
+	public static Franc franc(int amount) {
+		return new Franc(amount);
+	}
+	
 }
