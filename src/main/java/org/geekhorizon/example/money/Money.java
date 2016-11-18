@@ -15,12 +15,12 @@ public class Money {
 		return currency;
 	}
 
-	public static Doller doller(int amount) {
-		return new Doller(amount, "USD");
+	public static Money doller(int amount) {
+		return new Money(amount, "USD");
 	}
 
-	public static Franc franc(int amount) {
-		return new Franc(amount, "CHF");
+	public static Money franc(int amount) {
+		return new Money(amount, "CHF");
 	}
 	
 	public Money(int amount, String currency) {
@@ -30,5 +30,9 @@ public class Money {
 	
 	public String toString() {
 		return amount + "     " + currency;
+	}
+	
+	public Money times(int multiplier) {
+		return new Money(amount * multiplier, currency);
 	}
 }
