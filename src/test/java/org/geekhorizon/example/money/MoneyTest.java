@@ -22,4 +22,9 @@ public class MoneyTest {
 		
 	}
 
+	@Test
+	public void testEquality() {
+		assertTrue(new Doller(10).equals(new Doller(10)));
+		assertFalse(new Doller(6).equals(new Doller(5)));
+	}
 }

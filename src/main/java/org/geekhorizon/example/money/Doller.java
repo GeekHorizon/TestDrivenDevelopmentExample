@@ -11,5 +11,13 @@ public class Doller {
 	public Doller times(int multiplier) {
 		return new Doller(amount * multiplier);
 	}
+	
+	@Override
+	public boolean equals(Object e) {
+		
+		Doller d = (Doller) e;
+		
+		return amount == d.amount;
+	}
 
 }
