@@ -2,7 +2,7 @@ package org.geekhorizon.example.money;
 
 public class Doller {
 
-	public int amount;
+	private int amount;
 	
 	public Doller(int amount) {
 		this.amount = amount;
