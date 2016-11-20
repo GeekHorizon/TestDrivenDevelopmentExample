@@ -1,6 +1,6 @@
 package org.geekhorizon.example.money;
 
-public class Money {
+public class Money implements Expression {
 	
 	protected int amount;
 	protected String currency;
@@ -15,7 +15,7 @@ public class Money {
 		return currency;
 	}
 
-	public static Money doller(int amount) {
+	public static Money dollar(int amount) {
 		return new Money(amount, "USD");
 	}
 
@@ -32,7 +32,16 @@ public class Money {
 		return amount + "     " + currency;
 	}
 	
-	public Money times(int multiplier) {
+	public Expression times(int multiplier) {
 		return new Money(amount * multiplier, currency);
+	}
+
+	public Expression plus(Expression addend) {
+		return new Sum(this, addend);
+	}
+	
+	@Override
+	public Money reduce(Bank bank, String to) {
+		return new Money(amount / bank.rate(currency, to), to);
 	}
 }
