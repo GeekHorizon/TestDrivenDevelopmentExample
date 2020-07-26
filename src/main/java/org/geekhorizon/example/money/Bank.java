@@ -2,11 +2,7 @@ package org.geekhorizon.example.money;
 
 import java.util.Hashtable;
 
-/**
- * 테스트
- */
 public class Bank {
-
 
 	private Hashtable<Pair, Integer> rates = new Hashtable<Pair, Integer>();
 	
