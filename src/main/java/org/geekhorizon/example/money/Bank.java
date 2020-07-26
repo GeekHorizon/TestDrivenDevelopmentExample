@@ -31,6 +31,10 @@ public class Bank {
 		Pair(String from, String to) {
 			this.from = from;
 			this.to = to;
+
+
+
+
 		}
 		
 		public boolean equals(Object object) {
