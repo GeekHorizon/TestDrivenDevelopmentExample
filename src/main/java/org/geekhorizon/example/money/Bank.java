@@ -4,8 +4,6 @@ import java.util.Hashtable;
 
 public class Bank {
 
-
-
 	private Hashtable<Pair, Integer> rates = new Hashtable<Pair, Integer>();
 	
 	public Money reduce(Expression source, String to) {
@@ -33,10 +31,6 @@ public class Bank {
 		Pair(String from, String to) {
 			this.from = from;
 			this.to = to;
-
-
-
-
 		}
 		
 		public boolean equals(Object object) {
